@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'National Park';
+  src: url('../client/src/assets/fonts/NationalPark-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'National Park';
+  src: url('../client/src/assets/fonts/NationalPark-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'National Park', sans-serif;
+}
+
+.np-font-bold {
+  font-family: 'National Park', sans-serif;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #fbf4eb !important;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Or any color you want */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* On mobile, limit the underline width */
+@media (max-width: 768px) {
+  .nav-link:hover::after {
+    width: 38.5%; /* or any width you want, like 60%, 80px, etc. */
+    left: 30%;  /* center the underline if not full width */
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+footer{
+  background-color: #fbf4eb;
+}
