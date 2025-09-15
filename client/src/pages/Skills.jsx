@@ -73,7 +73,7 @@ const Skills = () => {
         <h3 className="text-center mb-4">Education</h3>
         <div className="row justify-content-center">
           {education.map((edu, index) => (
-            <div key={index} className="col-md-6 mb-3">
+            <div key={index} className="col-md-6 mb-3 p-5">
               <div className="card shadow-sm p-3 h-100">
                 <h5>{edu.school}</h5>
                 <p className="mb-1">
