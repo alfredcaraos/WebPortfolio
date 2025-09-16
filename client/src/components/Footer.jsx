@@ -19,7 +19,7 @@ const Footer = () => {
               </li>
               <li className="my-2">
                 <a
-                  href="https://facebook.com/yourprofile"
+                  href="https://www.facebook.com/caraosalfred"
                   className="text-black"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li className="my-2">
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/alfred-caraos-a5a05b263/"
                   className="text-black"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const Footer = () => {
               <li className="my-2">
                 <a href="viber://chat?number=%2B639XXXXXXXXX" className="text-black">
                   <FontAwesomeIcon icon={faViber} className="me-2" />
-                  +63 9XX XXX XXXX (Viber)
+                  +63 9950663497 (Viber)
                 </a>
               </li>
             </ul>

@@ -1,5 +1,6 @@
 import Portfolio from "../assets/image/portfolio_logo.png";
 import Img from "../components/Img";
+import Resume from "../assets/Caraos_Alfred_Resume.pdf";
 
 const Navbar = () => {
   return (
@@ -39,11 +40,11 @@ const Navbar = () => {
 
           {/* ✅ Download Resume Button (Right-Aligned) */}
           <a
-            href="/resume.pdf"
+            href={Resume}
             download
             className="btn btn-dark ms-lg-4 mt-3 mt-lg-0 px-4 py-2 rounded-pill"
           >
-            Download Resume
+            Download Resume 
           </a>
         </div>
       </div>
