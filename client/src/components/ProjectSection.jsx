@@ -1,7 +1,14 @@
 import Img from "../components/Img";
 import ProjectSlideshow from "./ProjectSlideshow";
 
-const ProjectSection = ({ title, media, tools, description, objectives, contributions }) => {
+const ProjectSection = ({
+  title,
+  media,
+  tools,
+  description,
+  objectives,
+  contributions,
+}) => {
   // Detect if media contains videos
   const isVideo =
     Array.isArray(media) &&
@@ -16,9 +23,7 @@ const ProjectSection = ({ title, media, tools, description, objectives, contribu
     <div className="container-fluid px-4 pt-5 pb-5 d-flex justify-content-center">
       <div className="w-100" style={{ maxWidth: "1200px" }}>
         {/* Section Title */}
-        {title && (
-          <h2 className="fw-bold text-center mb-5">{title}</h2>
-        )}
+        {title && <h2 className="fw-bold text-center mb-5">{title}</h2>}
 
         {/* ✅ Media Section (Video or Slideshow) */}
         <div className="d-flex justify-content-center mb-5">
@@ -46,7 +51,10 @@ const ProjectSection = ({ title, media, tools, description, objectives, contribu
             </div>
           ) : (
             <div className="shadow-lg rounded-4 overflow-hidden w-75">
-              <ProjectSlideshow images={media} className="d-flex justify-content-center py-5" />
+              <ProjectSlideshow
+                images={media}
+                className="d-flex justify-content-center py-5"
+              />
             </div>
           )}
         </div>
@@ -58,26 +66,27 @@ const ProjectSection = ({ title, media, tools, description, objectives, contribu
             <div className="mb-5">
               <h3 className="text-center fw-bold mb-4">🛠 Tools Used</h3>
               <div className="row justify-content-center">
-                {Object.entries(tools).map(([category, skills]) => (
-                  <div key={category} className="mb-4">
-                    <h5 className="text-center text-primary">{category}</h5>
-                    <div className="row justify-content-center">
-                      {skills.map((skill, index) => (
-                        <div
-                          key={index}
-                          className="col-6 col-sm-4 col-md-3 col-lg-2 text-center p-3"
-                        >
-                          <div
-                            className="p-3 rounded-4 bg-white shadow-sm"
-                            style={{ transition: "transform 0.2s ease" }}
-                            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                          >
-                            <Img src={skill.src} alt={skill.alt} className="skill-img" />
-                            <p className="mt-2 mb-0 fw-semibold">{skill.alt}</p>
-                          </div>
-                        </div>
-                      ))}
+                {tools.Frameworks.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="col-6 col-sm-4 col-md-3 col-lg-2 text-center p-3"
+                  >
+                    <div
+                      className="p-3 rounded-4 bg-white shadow-sm"
+                      style={{ transition: "transform 0.2s ease" }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.transform = "scale(1.05)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.transform = "scale(1)")
+                      }
+                    >
+                      <Img
+                        src={skill.src}
+                        alt={skill.alt}
+                        className="skill-img"
+                      />
+                      <p className="mt-2 mb-0 fw-semibold">{skill.alt}</p>
                     </div>
                   </div>
                 ))}
