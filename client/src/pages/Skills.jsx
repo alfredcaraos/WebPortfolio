@@ -18,12 +18,6 @@ import androidstudioIcon from "../assets/image/icon/androidstudio.png";
 import "../assets/css/icon.css";
 
 const Skills = () => {
-  const squareImageStyle = {
-    width: "75px",
-    height: "75px",
-    objectFit: "cover",
-  };
-
   // Classified skills
   const skillCategories = {
     Languages: [
@@ -67,38 +61,68 @@ const Skills = () => {
   ];
 
   return (
-    <div className="container-fluid mt-5">
-      {/* Education */}
+    <div className="container-fluid mt-5 px-4">
+      {/* Education Section */}
       <div className="mb-5">
-        <h3 className="text-center mb-4">Education</h3>
+        <h2 className="text-center fw-bold mb-4">🎓 Education</h2>
         <div className="row justify-content-center">
           {education.map((edu, index) => (
-            <div key={index} className="col-md-6 mb-3 p-5">
-              <div className="card shadow-sm p-3 h-100">
-                <h5>{edu.school}</h5>
+            <div key={index} className="col-md-5 m-3">
+              <div
+                className="card border-0 shadow rounded-4 p-4 h-100 hover-shadow"
+                style={{
+                  transition: "transform 0.2s ease-in-out",
+                  cursor: "default",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              >
+                <h5 className="fw-bold">{edu.school}</h5>
                 <p className="mb-1">
                   <strong>{edu.degree}</strong>
                 </p>
                 <p className="mb-1 text-muted">{edu.year}</p>
-                <p>{edu.details}</p>
+                <p className="mb-0">{edu.details}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/*Skills*/}
+      {/* Skills Section */}
       {Object.entries(skillCategories).map(([category, skills]) => (
         <div key={category} className="mb-5">
-          <h3 className="text-center mb-4">{category}</h3>
+          <h2 className="text-center fw-bold mb-4">{category}</h2>
           <div className="row justify-content-center">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="col-6 col-sm-4 col-md-3 col-lg-2 p-3 text-center"
+                className="col-6 col-sm-4 col-md-3 col-lg-2 text-center mb-4"
               >
-                <Img src={skill.src} alt={skill.alt} className="skill-img" />
-                <p className="mt-2">{skill.alt}</p>
+                <div
+                  className="p-3 rounded-4 shadow-sm bg-white d-flex flex-column align-items-center justify-content-center"
+                  style={{
+                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.05)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 16px rgba(0, 0, 0, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 2px 6px rgba(0, 0, 0, 0.1)";
+                  }}
+                >
+                  <Img
+                    src={skill.src}
+                    alt={skill.alt}
+                    className="skill-img"
+                    style={{ width: "75px", height: "75px", objectFit: "contain" }}
+                  />
+                  <p className="mt-2 mb-0 fw-semibold">{skill.alt}</p>
+                </div>
               </div>
             ))}
           </div>
