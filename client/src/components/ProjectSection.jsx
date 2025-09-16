@@ -46,7 +46,7 @@ const ProjectSection = ({ title, media, tools, description, objectives, contribu
             </div>
           ) : (
             <div className="shadow-lg rounded-4 overflow-hidden w-75">
-              <ProjectSlideshow images={media} className="d-flex justify-content-center" />
+              <ProjectSlideshow images={media} className="d-flex justify-content-center py-5" />
             </div>
           )}
         </div>

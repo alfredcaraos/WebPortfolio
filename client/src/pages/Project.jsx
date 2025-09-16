@@ -8,6 +8,7 @@ import mongodbIcon from "../assets/image/icon/mongodb.png";
 import firebaseIcon from "../assets/image/icon/firebase.png";
 import flutterIcon from "../assets/image/icon/flutter.png";
 import dartIcon from "../assets/image/icon/dart.png";
+import phpIcon from "../assets/image/icon/php.png";
 import ProjectSection from "../components/ProjectSection";
 import "../assets/css/icon.css";
 
@@ -40,6 +41,7 @@ const trainTools = {
     { src: htmlIcon, alt: "HTML" },
     { src: cssIcon, alt: "CSS" },
     { src: jsIcon, alt: "JavaScript" },
+    { src: phpIcon, alt: "PHP" },
   ],
 };
 

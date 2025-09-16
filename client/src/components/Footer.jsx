@@ -12,10 +12,10 @@ const Footer = () => {
             <h5 className="text-uppercase">Contact Me</h5>
             <ul className="list-unstyled">
               <li className="my-2">
-                <a href="mailto:yourname@gmail.com" className="text-black">
+                <div href="mailto:yourname@gmail.com" className="text-black">
                   <FontAwesomeIcon icon={faEnvelope} className="me-2" />
-                  yourname@gmail.com
-                </a>
+                  alfredcaraos@gmail.com
+                </div>
               </li>
               <li className="my-2">
                 <a

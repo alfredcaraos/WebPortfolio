@@ -17,7 +17,7 @@ const Home = () => {
           />
         </div>
         <div className="col-lg-6">
-          <h1 className="mb-4 text-primary fw-bold">👋 Introduction</h1>
+          <h1 className="mb-4  fw-bold">👋 Introduction</h1>
           <p className="fs-4 lh-lg text-secondary">
             My name is <span className="fw-semibold">Alfred A. Caraos</span>, a proud graduate
             of <span className="fw-semibold">National University Manila</span> with a
@@ -43,7 +43,7 @@ const Home = () => {
           />
         </div>
         <div className="col-lg-6">
-          <h1 className="mb-4 text-success fw-bold">🚀 New Adventure</h1>
+          <h1 className="mb-4 fw-bold">🚀 New Adventure</h1>
           <p className="fs-4 lh-lg text-secondary">
             Embark on a new adventure with me into the dynamic world of web development!
           </p>
